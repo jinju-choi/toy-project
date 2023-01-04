@@ -1,0 +1,40 @@
+
+.random-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.random-color .box {
+  width: 50%;
+  padding: 4rem;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: #111;
+}
+
+.random-color h2 {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.random-color .color-txt {
+  display: block;
+  color: #fff;
+}
+
+.random-color .btn {
+  margin-top: 2rem;
+  padding: 0.5rem 3rem;
+  border: 3px solid #111;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+}
