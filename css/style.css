@@ -1,4 +1,4 @@
-
+/* random color */
 .random-color {
   display: flex;
   flex-direction: column;
@@ -16,10 +16,6 @@
 }
 
 .random-color h2 {
-  line-height: 1.5;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
   color: #fff;
 }
 
@@ -30,11 +26,27 @@
 
 .random-color .btn {
   margin-top: 2rem;
-  padding: 0.5rem 3rem;
-  border: 3px solid #111;
-  border-radius: 10px;
-  font-size: 1.7rem;
-  font-weight: bold;
   background: transparent;
-  cursor: pointer;
+}
+
+/* counter */
+.counter {
+  height: 100vh;
+}
+
+.counter .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.counter .value {
+  margin: 2rem 0;
+  font-size: 5rem;
+}
+
+.counter .button-container .btn {
+  min-width: 12%;
+  padding: 1rem;
 }
