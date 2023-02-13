@@ -20,16 +20,33 @@ function getRandomNumber(){
 
 const copyBtn = document.querySelector('.copy-btn');
 
-function copyToClipboard(val) {
-  const t = document.createElement("textarea");
-  document.body.appendChild(t);
-  t.value = val;
-  t.select();
-  document.execCommand('copy');
-  document.body.removeChild(t);
-}
-
 copyBtn.addEventListener('click', function(){
-  copyToClipboard(colorTxt.textContent);
-  alert('Copied!');
+  copyText();
 });
+
+// 텍스트 복사 기능 구현
+function copyText() {
+  // clipboard API 사용
+  if (navigator.clipboard !== undefined) {
+    navigator.clipboard
+      .writeText(colorTxt.textContent)
+      .then(() => {
+        alert('복사되었습니다!');
+      });
+  } else {
+    // execCommand 사용
+    const textArea = document.createElement('textarea');
+    textArea.value = colorTxt.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    textArea.setSelectionRange(0, 99999);
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('복사 실패하였습니다.', err);
+    }
+    textArea.setSelectionRange(0, 0);
+    document.body.removeChild(textArea);
+    alert('복사되었습니다!');
+  }
+};
