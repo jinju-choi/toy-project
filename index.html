@@ -15,12 +15,15 @@
             <h1 class="title-text">Vanilla Javascript Mini Project</h1>
             <ul class="project-list">
                 <li>
+                    <span class="num"></span>
                     <a href="./random-color.html">Random color</a>
                 </li>
                 <li>
+                    <span class="num"></span>
                     <a href="./counter.html">Counter</a>
                 </li>
                 <li>
+                    <span class="num"></span>
                     <a href="./random-review-carousel.html">review carousel</a>
                 </li>
             </ul>
@@ -28,6 +31,13 @@
     </main>
 
     <script>
+        const projectList = document.querySelector('.project-list');
+        const projectListItem = document.querySelectorAll('.project-list li');
+        const num = document.querySelectorAll('.num');
+
+        num.forEach((item, idx)=> {
+            item.textContent = idx+1;
+        });
 
     </script>
 </body>

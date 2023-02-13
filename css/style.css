@@ -25,6 +25,11 @@
   color: blue;
 }
 
+.index-page .project-list .num {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 /* ------------ random color ------------ */
 .random-color {
   display: flex;
