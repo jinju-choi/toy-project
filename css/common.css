@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .btn {
     border-radius: 10px;
     padding: 0.5rem 3rem;
