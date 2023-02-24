@@ -229,7 +229,7 @@
   color: #d4a114;
 }
 
-nav.nav-toggle {
+nav .nav-toggle {
   display: none;
 }
 
@@ -305,7 +305,7 @@ nav.nav-toggle {
     display: block;
   }
 
-  nav.nav-toggle {
+  nav .nav-toggle {
     display: block;
   }
 
